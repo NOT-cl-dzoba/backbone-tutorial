@@ -6,7 +6,7 @@ define([
   'collections/tasklists'
 ],
 
-function(ApiManager, AppView, AuthView, ListMenuView, TaskLists) {
+function(ApiManager, AppView, AuthView, ListMenuView,TaskLists) {
   var App = function() {
     this.views.app = new AppView();
     this.views.app.render();
