@@ -6,7 +6,7 @@ define([
   'collections/tasklists'
 ],
 
-function(ApiManager, AppView, AuthView, ListMenuView,TaskLists) {
+function(ApiManager, AppView, AuthView, ListMenuView, TaskLists) {
   var App = function() {
     this.views.app = new AppView();
     this.views.app.render();
@@ -29,7 +29,7 @@ function(ApiManager, AppView, AuthView, ListMenuView,TaskLists) {
       this.apiManager = new ApiManager(this);
       this.apiManager.on('ready', function() {
         self.collections.lists.fetch({ data: { userId: '@me' }, success: function(res) {
-          self.views.listMenu.render();
+          //self.views.listMenu.render();
         }});
       });
     }
