@@ -5,8 +5,8 @@ define(['text!templates/lists/form.html'], function(template) {
     template: _.template(template),
 
     events: {
-      'submit': 'submit'
-    , 'click .cancel': 'cancel'
+      'submit': 'submit',
+      'click .cancel': 'cancel'
     },
 
     initialize: function() {
@@ -25,8 +25,8 @@ define(['text!templates/lists/form.html'], function(template) {
     },
 
     submit: function() {
-      var self = this
-        , title = this.$el.find('input[name="title"]').val()
+      var self = this,
+          title = this.$el.find('input[name="title"]').val()
         ;
 
       this.model.save({ title: title }, {
